@@ -60,13 +60,13 @@
             </div>
             <div class="carousel-inner">
                 <div id="cartel1" class="carousel-item active">
-                    <p>Foto1</p>
+                    <img  class="img-carrusel" src="https://images.pexels.com/photos/28894643/pexels-photo-28894643.jpeg?auto=compress&cs=tinysrgb&w=900" alt="bariloche" >
                 </div>
                 <div id="cartel2" class="carousel-item">
-                    <p>Foto2</p>
+                    <img src="https://images.pexels.com/photos/22036697/pexels-photo-22036697/free-photo-of-resfriado-frio-montanas-volador.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
                 </div>
                 <div id="cartel3" class="carousel-item">
-                    <p>Foto3</p>
+                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj2qiaf6ie3vZok6R9udCX6RXf3hoIm-IHXA&s" alt="Mendoza">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -80,13 +80,14 @@
             </div>
         </div>
         <!-- FINAL DEL CARRUSEL -->
-        <!-- inicio del contendr carritos-->
+        <div id="separador"></div>
         <div class="main">
             <div class="tabs">
                 <div class="active">Vuelos</div>
                 <div>Ultra Pases</div>
             </div>
             <div class="form">
+                <!--Droopdown origen-->
                 <div class="input-group">
                     <label for="origin">ORIGEN</label>
                     <i class="fas fa-plane-departure icon"></i>
@@ -111,9 +112,9 @@
                         <option >Sao Paoblo (SAO)</option>
                         <option >Tucumán (TUC)</option>
                         <option >Ushuaia (USH)</option>
-
                     </select>
                 </div>
+                <!-- dropdown destino-->
                 <div class="input-group">
                     <label for="destination">DESTINO</label>
                     <i class="fas fa-plane-arrival icon"></i>
@@ -121,36 +122,71 @@
                         <option>Ciudad o aeropuerto</option>
                     </select>
                 </div>
-                <div class="input-group">
+                <!--Dropdown Pasajeros-->
+                <div class="input-group passenger-dropdown">
                     <label for="passengers">CANTIDAD DE PASAJEROS</label>
-                    <i class="fas fa-user icon"></i>
-                    <select id="passengers">
-                        <option>1 Adulto</option>
-                    </select>
+                    <div class="select-wrapper">
+                        <i class="fas fa-user icon"></i>
+                        <div class="passenger-select" onclick="toggleDropdown()">
+                            <span id="passenger-text">1 Adulto</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="dropdown-content" id="dropdown-passenger">
+                        <div class="passenger-group">
+                            <label>Adultos</label>
+                            <div class="counter">
+                                <button onclick="decrement('adult')">-</button>
+                                <span id="adult-count">1</span>
+                                <button onclick="increment('adult')">+</button>
+                            </div>
+                        </div>
+                        <div class="passenger-group">
+                            <label>Niños</label>
+                            <div class="counter">
+                                <button onclick="decrement('child')">-</button>
+                                <span id="child-count">0</span>
+                                <button onclick="increment('child')">+</button>
+                            </div>
+                        </div>
+                        <div class="passenger-group">
+                            <label>Bebés</label>
+                            <div class="counter">
+                                <button onclick="decrement('infant')">-</button>
+                                <span id="infant-count">0</span>
+                                <button onclick="increment('infant')">+</button>
+                            </div>
+                        </div>
+                        <div class="apply-btn">
+                            <button onclick="applyPassengerSelection()">Aplicar</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="search-button">Buscar vuelos</button>
-               <br>
-                <div class="promo-code">
-                    <label for="promo-code">CÓDIGO PROMOCIONAL</label>
-                    <input type="checkbox" id="promo-code">
+                <button  id="Buscar" class="search-button">Buscar vuelos</button>
+                
+                <div  id="switch-button" class="promo-code">
+                    <label >CÓDIGO PROMOCIONAL</label>
+                    <br>
+                    <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+                    <label for="switch-label" class="switch-button__label"></label>
                 </div>
             </div>
-        
         </div>
 
         <div id="separador"></div>
     </main>
     
+    
     <!-- Este es el pie de pagina -->
     <footer>
         <div class="contenedorDatosRedes">
             <div class="datosYredes">
-            <div class="datos">
+             <div class="datos">
                 <h1>LOCAL</h1>
                 <h2>Av. Álvarez Jonte 3299</h2>
                 <h2>C1407GOA CABA</h2>  
-            </div>
-            <div class="redes">
+             </div>
+             <div class="redes">
                 <h1>EN LAS REDES</h1>
                 <div class="iconos">
                     <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
@@ -158,16 +194,15 @@
                     <a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a>
                     <a href="https://ar.linkedin.com/"><i class="bi bi-linkedin"></i></a>
                 </div>
-                
-            </div>
+             </div>
             </div>
         </div>
         
         <p>&copy 2024  SKYFLYER Argentina</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <!--Conecion con supabase-->
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="./js/index.js"></script>
 </body>
-
 </html>
