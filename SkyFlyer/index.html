@@ -18,7 +18,7 @@
         <!-- fixed-top -->
         <nav id="navegador" class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a id="navNombre" class="navbar-brand" href="#encabezado">SKYFLYER</a>
+                <a id="navNombre" class="navbar-brand" href="/index.html">SKYFLYER</a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvas NavbarLabel">
                     <div class="offcanvas-header">
                         <h3>Menú</h3>
@@ -50,13 +50,13 @@
             </div>
             <div class="carousel-inner">
                 <div id="cartel1" class="carousel-item active">
-                    <img  class="img-carrusel" src="https://images.pexels.com/photos/28894643/pexels-photo-28894643.jpeg?auto=compress&cs=tinysrgb&w=900" alt="bariloche" >
+                    <img  class="img-carrusel" src="assets/img/paisaje1.jpg" alt="bariloche" >
                 </div>
                 <div id="cartel2" class="carousel-item">
-                    <img src="https://images.pexels.com/photos/22036697/pexels-photo-22036697/free-photo-of-resfriado-frio-montanas-volador.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+                    <img src="assets/img/paisaje2.jpeg" alt="">
                 </div>
                 <div id="cartel3" class="carousel-item">
-                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj2qiaf6ie3vZok6R9udCX6RXf3hoIm-IHXA&s" alt="Mendoza">
+                    <img src="assets/img/paisaje3.jpg" alt="paisaje1">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -74,7 +74,6 @@
         <div class="main">
             <div class="tabs">
                 <div class="active">Vuelos</div>
-                <div>Ultra Pases</div>
             </div>
             <div class="form">
                 <!--Droopdown origen-->
@@ -115,42 +114,13 @@
                 <!--Dropdown Pasajeros-->
                 <div class="input-group passenger-dropdown">
                     <label for="passengers">CANTIDAD DE PASAJEROS</label>
-                    <div class="select-wrapper">
-                        <i class="fas fa-user icon"></i>
-                        <div class="passenger-select" onclick="toggleDropdown()">
-                            <span id="passenger-text">1 Adulto</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                    <div class="dropdown-content" id="dropdown-passenger">
-                        <div class="passenger-group">
-                            <label>Adultos</label>
-                            <div class="counter">
-                                <button onclick="decrement('adult')">-</button>
-                                <span id="adult-count">1</span>
-                                <button onclick="increment('adult')">+</button>
-                            </div>
-                        </div>
-                        <div class="passenger-group">
-                            <label>Niños</label>
-                            <div class="counter">
-                                <button onclick="decrement('child')">-</button>
-                                <span id="child-count">0</span>
-                                <button onclick="increment('child')">+</button>
-                            </div>
-                        </div>
-                        <div class="passenger-group">
-                            <label>Bebés</label>
-                            <div class="counter">
-                                <button onclick="decrement('infant')">-</button>
-                                <span id="infant-count">0</span>
-                                <button onclick="increment('infant')">+</button>
-                            </div>
-                        </div>
-                        <div class="apply-btn">
-                            <button onclick="applyPassengerSelection()">Aplicar</button>
-                        </div>
-                    </div>
+                    <i class="fas fa-user icon"><p>1 Pasajero</p></i>
+                    
+                    <!--
+                    <select name="passenger" id="Pasajero">
+                        <option value="1"> 1 Pasajero</option>
+                    </select>
+                    -->
                 </div>
                 <a href="/assets/pages/EFecha.html" id="Buscar" class="search-button">Buscar vuelos</a>
                 <!-- <button  id="Buscar" class="search-button">Buscar vuelos</button> -->
