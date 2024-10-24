@@ -14,16 +14,6 @@ AdminActivo();
 
 
 
-let btnCerrarSesion = document.getElementById("botonCerrarSesion");
-
-btnCerrarSesion.onclick = (e) =>{
-    e.preventDefault()
-    botonCerrar.style.display = "none";
-    botonLogin.style.display = "block";
-    localStorage.setItem("usuarioInicioSesion", true);
-};
-
-
 // para ir haci otra pagina:
 document.getElementById("Buscar").addEventListener("click"), function(){
 window.location.href="./pages/EFecha.html"
