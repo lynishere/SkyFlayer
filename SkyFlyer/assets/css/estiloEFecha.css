@@ -28,9 +28,6 @@
     color: black;
 }
 
-
-    
-    
 #botonAbrirMenu{
     border: none;
     font-size: 1.25rem;
@@ -45,53 +42,146 @@
     position: relative;
 }
 
+
+
+/*MAIN*/
 /*Calendario*/
-.Container-Calendar{
-    height: 60vw;
-    width: 100%;
-margin-top: 10%;
-grid-row: auto;
-}
-.Container-Calendar h1{
-    text-align: center;
+.contenedorCarousel{
+    margin-bottom: 2vw;
 }
 .carousel {
-    display: flex; /* Usar flexbox para alinear los calendarios */
-    justify-content: center; /* Centrar los calendarios horizontalmente */
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.carousel {
+    height: auto;
 }
 
-.month {
-    margin: 20px; /* Espaciado entre los meses */
-    border: 1px solid #ccc; /* Borde para cada mes */
+.carousel-item {
+    flex: 0 0 100%; /* Cada elemento ocupará el 100% del ancho del carrusel */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
     padding: 10px;
-    width: 600px; /* Ancho fijo para cada mes */
+    box-sizing: border-box;
 }
-button{
-    background-color: rgba(255, 255, 255, 0.185);
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
 }
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Crear una cuadrícula de 7 columnas */
+.carousel-item {
+    display: none;
+}
+.carousel-item:first-child {
+    display: block;
+}
+table {
+    width: 90%; /* Ajusta el tamaño de la tabla dentro del contenedor */
+    max-width: 100%; /* Para que no exceda el tamaño del contenedor */
+    margin: auto; /* Centra la tabla */
+   /*table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}*/
 }
 
-.day {
-    padding: 10px;
-    text-align: center;
+
+.carousel-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top:-270px; /* Ajusta esta distancia según la altura del calendario */
+}
+
+.carousel-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    color: white;
+    border: none;
+    padding: 2px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 20px;
+    border-radius: 100%;
 }
 
-.day:hover {
-    background-color: #76f3e2;
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.day.selected {
-    background-color: #81cffc;
+.carousel-nav button:first-of-type {
+    left: 10px; /* Ubicación a la izquierda */
 }
 
-.day.disabled {
-    color: #443131; /* Color gris para los días deshabilitados */
-    pointer-events: none; /* Desactivar eventos del mouse */
+.carousel-nav button:last-of-type {
+    right: 10px; /* Ubicación a la derecha */
+}
+
+th, td {
+
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+td button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+table th, table td {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+button.boton-eliminar {
+    
+    font-size: 0.7em;
+}
+.boton-eliminar{
+    position: absolute;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    background: rgb(36, 35, 35);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 0.7em;
+}
+.boton-eliminar:hover{
+    background-color: gray;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+button:hover {
+    color: white;
+    background-color: #8abce6;
+}
+.seleccionado {
+    background-color: rgb(128, 177, 184);
+    color: white;
+}
+.carousel-item h3{
+    text-align: center;
+    font-size: 20px;
+}
+main h4{
+    text-align: center;
+    font-size: 25px;
 }
 
 
@@ -99,64 +189,124 @@ button{
 /*PIE DE PÁGINA*/
 footer{
     background-color: rgb(255, 255, 255);
+    border-top: solid black;
 }
-.contenedorDatosRedes{
+
+.contenedorInformacionRedes{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-.datosYredes{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 12vw;
-    justify-items: center;
-    align-items: center;
-    width: 50vw;
-    padding: 4vw;
-    margin-top: 15vw;
-    margin-bottom: 15vw;
+    border-top: solid;
+    background-color: rgb(7, 235, 235);
 }
 
-.datos h1{
-    font-weight: bold;
-    font-size: 4.6vw;
-    padding-bottom: 3vw;
-}
-.datos h2{
-    font-size: 3.6vw;
-    margin: 0;
+.contenedorInformacionRedes .informacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11.5vw;
+    margin: 1vw 3vw;
 }
 
-.redes h1{
+.informacion .descripcion{
+    padding: 2vw 2vw;
+}
+
+.informacion .descripcion .vuelos-button {
+    border: 0.1vw black solid;
+    padding: 0.9vw 13.5vw;
+    border-radius: 50px;
     font-weight: bold;
-    font-size: 4.6vw;
-    padding-bottom: 3vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 0.5s;
 }
-.redes .iconos{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    gap: 3.3vw;
+.informacion .descripcion .vuelos-button:hover {
+    background-color:rgba(168, 247, 247, 0.884);
+    transition: 0.3s;
 }
-.iconos i{
-    font-size: 5.6vw;
+
+.informacion .descripcion h1{
+    font-size: 1.6vw;
+    font-weight: bold;
+    padding-bottom: 1vw;
+}
+.informacion .descripcion h2{
+    font-size: 0.9vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.informacion .enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion .enlaces section{
+    width: 14vw;
+    height: 15.3vw;
+    padding: 2vw 0;
+}
+
+.informacion .enlaces section h2{
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 0;
+}
+
+.informacion .enlaces section ul{
+    padding: 0;
+}
+
+.informacion .enlaces section ul li{
+    list-style-type: none;
+}
+.informacion .enlaces section ul li a{
+    text-decoration: none;
     color: black;
 }
-.iconos a{
+.informacion .enlaces section ul li a:hover{
+    text-decoration: none;
+    color: rgba(39, 125, 125, 0.884);
+}
+
+
+.informacion .redes{
+    display: flex;
+    justify-content: right;
+    padding-right: 2vw;
+}
+
+.informacion .redes .iconos{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0.9vw;
+}
+
+.informacion .redes .iconos i{
+    font-size: 2vw;
+    color: black;
+}
+
+.informacion .redes .iconos a{
     border-radius: 50%;
     transition: transform 0.25s;
 }
-.iconos a:hover{
+.informacion .redes .iconos a:hover{
     transform: scale(1.2);
 }
-
 footer p{
     background-color: rgb(89, 89, 89);
     text-align: center;
     color: white;
-    font-size: 3vw;
-    padding: 5vw;
+    font-size: 0.8vw;
+    padding: 1.5vw;
     margin: 0;
 }
 
@@ -185,6 +335,7 @@ footer p{
     /*PIE DE PÁGINA*/
     footer{
         background-color: rgb(255, 255, 255);
+        border-top: solid black;
     }
     .contenedorDatosRedes{
         display: flex;
@@ -267,10 +418,10 @@ footer p{
         left: 50%;
         transform: translateX(-50%);
         width: 0;
-        height: 2px;
+        height: 1.8vw;
         visibility: hidden;
         transition: 0.3s ease-in-out;
-        border-bottom: 0.3VW solid #6f15e4;
+        font-size: 2vw;
     }
 
     .nav-link:hover::before, .nav-link.active::before{
@@ -280,39 +431,20 @@ footer p{
 
 
     /*MAIN*/
-    #presentacion{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 8vw;
-        padding-bottom: 30vw;
-        height: 15vw;
-    }
-    #saludo h1{
-        color: black;
-        text-align: center;
-        font-size: 8vw;
-        margin-bottom: 3vw;
-    }
-    #saludo p{
-        color: black;
-        font-size: 2vw;
-        text-align: center;
-    }
 
     /* CARRUSEL */
     .carousel-inner{
-        height: 15vw;
+        height: 35vw;
     }
     .carousel-item{
-        height: 15vw;
+        height: 35vw;
     }
 
 
     /*PIE DE PÁGINA*/
     footer{
         background-color: rgb(255, 255, 255);
+        border-top: solid black;
     }
     .contenedorDatosRedes{
         display: flex;
@@ -396,8 +528,8 @@ footer p{
         height: 5vw; /* Puedes ajustar el tamaño según la vista */
         z-index: 1000; /* Asegúrate de que tenga un valor alto para que esté encima del contenido */
         background-color: white; /* Asegúrate de que tenga un fondo visible */
-        box-shadow: 0 0 18px rgb(7, 235, 235);;
-        font-family: "Nunito", sans-serif;
+        box-shadow: 0 0 18px rgb(7, 235, 235);   
+        transition: 0.5s;
     }
 
     #navNombre{
@@ -409,36 +541,26 @@ footer p{
 
     #navegador:hover{
         background-color: rgb(7, 235, 235);
+        transition: 0.5s;
+    }
+
+    .nav-link{
+        height: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15vw 0;
+        font-size: 2vw;
+        transition: 1s;
+    }
+
+    .nav-link:hover{
         transition: 0.3s;
-    }
-
-    .nav-link::before{
-        content:"";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 1.8vw;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-        border-top: 0.1VW solid black;
-        border-bottom: 0.1VW solid black;
-    }
-
-    .nav-link:hover::before, .nav-link.active::before{
-        width: 100%;
-        visibility: visible;
+        transform: scale(1.15);
     }
     
     
-    /* CARRUSEL */
-    .carousel-inner{
-        height: 35vw;
-    }
-    .carousel-item{
-        height: 35vw;
-    }
+    
 
 
 
@@ -447,56 +569,116 @@ footer p{
     /*PIE DE PÁGINA*/
     footer{
         background-color: rgb(255, 255, 255);
+        border-top: solid black;
     }
-    .contenedorDatosRedes{
+    
+    .contenedorInformacionRedes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: solid;
+        background-color: rgb(7, 235, 235);
+    }
+
+    .contenedorInformacionRedes .informacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 11.5vw;
+        margin: 1vw 3vw;
+    }
+
+    .informacion .descripcion{
+        padding: 2vw 2vw;
+    }
+
+    .informacion .descripcion .vuelos-button {
+        border: 0.1vw black solid;
+        padding: 0.9vw 13.5vw;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .informacion .descripcion .vuelos-button:hover {
+        background-color:rgba(168, 247, 247, 0.884);
+        transition: 0.3s;
+    }
+    
+    .informacion .descripcion h1{
+        font-size: 1.6vw;
+        font-weight: bold;
+        padding-bottom: 1vw;
+    }
+    .informacion .descripcion h2{
+        font-size: 0.9vw;
+        font-weight: bold;
+        margin-bottom: 2vw;
+    }
+
+    .informacion .enlaces{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 20vw;
-        border-top: solid;
     }
-    .datosYredes{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        gap: 20vw;
-        justify-items: center;
-        align-items: center;
-        width: 80vw;
-        padding: 4vw;
-        margin-top: 15vw;
-        margin-bottom: 15vw;
+
+    .informacion .enlaces section{
+        width: 14vw;
+        height: 15.3vw;
+        padding: 2vw 0;
     }
-    .datos h1{
-        font-weight: bold;
-        font-size: 1.5vw;
-        padding-bottom: 3vw;
-    }
-    .datos h2{
+
+    .informacion .enlaces section h2{
         font-size: 1vw;
-        margin: 0;
-    }
-    .redes h1{
         font-weight: bold;
-        font-size: 1.5vw;
-        padding-bottom: 3vw;
+        padding: 0;
     }
-    .redes .iconos{
+
+    .informacion .enlaces section ul{
+        padding: 0;
+    }
+
+    .informacion .enlaces section ul li{
+        list-style-type: none;
+    }
+    .informacion .enlaces section ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .informacion .enlaces section ul li a:hover{
+        text-decoration: none;
+        color: rgba(39, 125, 125, 0.884);
+    }
+
+
+    .informacion .redes{
+        display: flex;
+        justify-content: right;
+        padding-right: 2vw;
+    }
+
+    .informacion .redes .iconos{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
         gap: 0.9vw;
     }
-    .iconos i{
+
+    .informacion .redes .iconos i{
         font-size: 2vw;
         color: black;
     }
-    .iconos a{
+
+    .informacion .redes .iconos a{
         border-radius: 50%;
         transition: transform 0.25s;
     }
-    .iconos a:hover{
+    .informacion .redes .iconos a:hover{
         transform: scale(1.2);
     }
     footer p{

@@ -27,7 +27,16 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center pe-3">
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Mi reserva</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Experiencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Destinos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Skyflyer</a>
                             </li>
                         </ul>
                     </div> 
@@ -70,7 +79,7 @@
             </div>
         </div>
         <!-- FINAL DEL CARRUSEL -->
-       
+
         <div class="main">
             <div class="tabs">
                 <div class="active">Vuelos</div>
@@ -80,7 +89,7 @@
                 <div class="input-group">
                     <label for="origin">ORIGEN</label>
                     <i class="fas fa-plane-departure icon"></i>
-                    <select>
+                    <select class="opciones">
                         <option>Buenos Aires (BUE)</option>
                         <option>Bariloche (BRC)</option>
                         <option>Comodoro Rivadavia (CRD)</option>
@@ -107,14 +116,14 @@
                 <div class="input-group">
                     <label for="destination">DESTINO</label>
                     <i class="fas fa-plane-arrival icon"></i>
-                    <select id="destination">
+                    <select class="opciones">
                         <option>Ciudad o aeropuerto</option>
                     </select>
                 </div>
                 <!--Dropdown Pasajeros-->
                 <div class="input-group passenger-dropdown">
                     <label for="passengers">CANTIDAD DE PASAJEROS</label>
-                    <i class="fas fa-user icon"><p>1 Pasajero</p></i>
+                    <i id="icono" class="fas fa-user icon"><p>1 Pasajero</p></i>
                     
                     <!--
                     <select name="passenger" id="Pasajero">
@@ -122,49 +131,78 @@
                     </select>
                     -->
                 </div>
-                <a href="/assets/pages/EFecha.html" id="Buscar" class="search-button">Buscar vuelos</a>
+                <a href="./assets/pages/EFecha.html" id="Buscar" class="search-button">Buscar vuelos</a>
                 <!-- <button  id="Buscar" class="search-button">Buscar vuelos</button> -->
-                
-                
+                <!--
+                <br><br>
                 <div  id="switch-button" class="promo-code">
                     <label >CÓDIGO PROMOCIONAL</label>
                     <br>
                     <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
                     <label for="switch-label" class="switch-button__label"></label>
                 </div>
+                -->
             </div>
         </div>
-
-        <div id="separador"></div>
     </main>
     
     
     <!-- Este es el pie de pagina -->
     <footer>
-        <div class="contenedorDatosRedes">
-            <div class="datosYredes">
-             <div class="datos">
-                <h1>LOCAL</h1>
-                <h2>Av. Álvarez Jonte 3299</h2>
-                <h2>C1407GOA CABA</h2>  
-             </div>
-             <div class="redes">
-                <h1>EN LAS REDES</h1>
-                <div class="iconos">
-                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-                    <a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a>
-                    <a href="https://ar.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+        <div class="contenedorInformacionRedes">
+                <div class="informacion">
+                    <div class="descripcion">
+                        <h1>Somos Skyflyer</h1>
+                        <h2>Somos más que una aerolínea; somos quienes unimos a todos. Hacemos que cada vuelo sea inolvidable y te brindamos la mejor posibilidad de estar allí en un milésima de segundo. Somos una familia que hace que tu vuelo sea una experiencia memorable.</h2>
+                        <a href="./assets/pages/EFecha.html" class="vuelos-button">Buscar vuelos</a>
+                    </div>
+                    <div class="enlaces">
+                        <section>
+                            <h2>NOSOTROS</h2>
+                            <ul>
+                                <li>
+                                    <a href="">SobreSkyFlyer</a>
+                                </li>
+                                <li>
+                                    <a href="">¿Preguntas?</a>
+                                </li>
+                            </ul>
+                        </section>
+    
+                        <section>
+                            <h2>ARMÁ TU VIAJE</h2>
+                            <ul>
+                                <li>
+                                    <a href="">Buscar vuelos</a>
+                                </li>
+                                <li>
+                                    <a href="">Destinos</a>
+                                </li>
+                                <li>
+                                    <a href="">Menú a bordo</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="redes">
+                        <div class="iconos">
+                            <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                            <a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a>
+                            <a href="https://ar.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
                 </div>
-             </div>
-            </div>
         </div>
-        
-        <p>&copy 2024  SKYFLYER Argentina</p>
+
+        <p>&copy 2024  SKYFLYER Argentina</p>        
     </footer>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     <!--Conecion con supabase-->
-     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script src="assets/js/index.js"></script>
+    <!--Conecion con supabase-->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
