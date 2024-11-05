@@ -19,7 +19,8 @@
     height: 18vw; /* Puedes ajustar el tamaño según la vista */
     z-index: 1000; /* Asegúrate de que tenga un valor alto para que esté encima del contenido */
     background-color: white; /* Asegúrate de que tenga un fondo visible */
-    box-shadow: 0 0 18px rgba(202, 33, 33, 0.5);
+    box-shadow: 0 0 18px rgb(7, 235, 235); 
+    font-family: "Nunito", sans-serif;
 }
 
 #navNombre{
@@ -28,6 +29,7 @@
     color: black;
 }
 
+    
 #botonAbrirMenu{
     border: none;
     font-size: 1.25rem;
@@ -48,13 +50,31 @@
 /*Calendario*/
 .contenedorCarousel{
     margin-bottom: 2vw;
+    margin: 2vw 5vw;
+}
+.contenedorCarousel h4{
+    font-size: 1.8vw;
+    padding: 2vw 2vw;
+    margin: 0;
+    font-weight: bold;
 }
 .carousel {
     display: flex;
     overflow: hidden;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+    margin: 1vw 0;
 }
+.carousel .row {
+    height: 30vw;
+}
+.carousel .row h3 {
+    font-weight: bold;
+    margin-bottom: 1VW;
+}
+
+
 .carousel {
     height: auto;
 }
@@ -64,9 +84,9 @@
     display: flex;
     justify-content: center; /* Centra el contenido */
     align-items: center;
-    padding: 10px;
     box-sizing: border-box;
 }
+
 .carousel-item {
     min-width: 100%;
     transition: transform 0.5s ease;
@@ -90,10 +110,9 @@ table {
 
 
 .carousel-nav {
-    position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top:-270px; /* Ajusta esta distancia según la altura del calendario */
+    flex-direction: column;
 }
 
 .carousel-nav button {
@@ -105,7 +124,7 @@ table {
     border: none;
     padding: 2px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2vw;
     border-radius: 100%;
 }
 
@@ -120,6 +139,7 @@ table {
 .carousel-nav button:last-of-type {
     right: 10px; /* Ubicación a la derecha */
 }
+
 
 th, td {
 
@@ -140,7 +160,6 @@ table th, table td {
 }
 
 button.boton-eliminar {
-    
     font-size: 0.7em;
 }
 .boton-eliminar{
@@ -169,10 +188,10 @@ button {
 }
 button:hover {
     color: white;
-    background-color: #8abce6;
+    background-color: rgb(148, 224, 224);
 }
 .seleccionado {
-    background-color: rgb(128, 177, 184);
+    background-color: rgb(7, 215, 215);
     color: white;
 }
 .carousel-item h3{

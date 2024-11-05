@@ -1,24 +1,29 @@
-const botonLogin = document.getElementById("botonLogin");
-const botonCerrar = document.getElementById("botonCerrarSesion");
+ // Obtener los elementos de origen y destino
+const origenSelect = document.querySelector('#origen select');
+const destinoSelect = document.querySelector('#destino select');
 
-function AdminActivo(){
-    let AdminActivo = localStorage.getItem("Administrador");
-    if(AdminActivo == "ACTIVO"){
-        botonLogin.style.display = "none";
-        botonCerrar.style.display = "block";
+// Función para actualizar las opciones de destino
+function updateOptions(selectedOption, targetSelect) {
+    // Restaurar todas las opciones en el select de destino
+    [...targetSelect.options].forEach(option => {
+        option.hidden = false;
+    });
+
+    // Ocultar la opción seleccionada en origen del select de destino y viceversa
+    if (selectedOption) {
+        const optionToHide = [...targetSelect.options].find(option => option.value === selectedOption.value);
+        if (optionToHide) {
+            optionToHide.hidden = true;
+        }
     }
 }
-AdminActivo();
 
+// Escuchar cambios en origen
+origenSelect.addEventListener('change', (e) => {
+    updateOptions(e.target.selectedOptions[0], destinoSelect);
+});
 
-
-
-
-// para ir haci otra pagina:
-document.getElementById("Buscar").addEventListener("click"), function(){
-window.location.href="./pages/EFecha.html"
-}
-
-
-
-
+// Escuchar cambios en destino
+destinoSelect.addEventListener('change', (e) => {
+    updateOptions(e.target.selectedOptions[0], origenSelect);
+});
