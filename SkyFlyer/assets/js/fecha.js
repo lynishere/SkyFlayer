@@ -15,8 +15,8 @@ let indiceCarrusel = 0;
             idioma = 'es'
         } = opciones;
 
-        const diasSemanaES = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
-        const diasSemanaEN = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+        const diasSemanaES = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+        const diasSemanaEN = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
         const diasSemana = idioma === 'es' ? diasSemanaES : diasSemanaEN;
 
         meses.forEach((mes, index) => {
@@ -103,4 +103,26 @@ let indiceCarrusel = 0;
         { año: 2024, mes: 12 },
         { año: 2025, mes: 1 }
     ];
+//Generar hora
+function generarHoras() {
+    const select = document.getElementById("hora");
+    
+    // Creamos las opciones de horas
+    for (let h = 0; h < 24; h++) {
+        for (let m = 0; m < 60; m += 15) {
+            // Formatear la hora y los minutos
+            const hour = h < 10 ? '0' + h : h;  // Asegura que las horas tengan 2 dígitos
+            const minutes = m < 10 ? '0' + m : m;  // Asegura que los minutos tengan 2 dígitos
+            const time = `${hour}:${minutes}`;
+            
+            // Crear la opción para el select
+            const option = document.createElement("option");
+            option.value = time;
+            option.textContent = time;
+            select.appendChild(option);
+        }
+    }
+}
+
     generarCalendario(meses, { idioma: 'es' });
+    window.onload = generarHoras;

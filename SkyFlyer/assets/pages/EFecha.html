@@ -19,7 +19,7 @@
         <!-- fixed-top -->
         <nav id="navegador" class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a id="navNombre" class="navbar-brand" href="/index.html">SKYFLYER</a>
+                <a id="navNombre" class="navbar-brand" href="../../index.html">SKYFLYER</a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvas NavbarLabel">
                     <div class="offcanvas-header">
                         <h3>Menú</h3>
@@ -28,16 +28,16 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center pe-3">
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Mi reserva</a>
+                                <a class="nav-link mx-lg-2" aria-current="page" href="../../index.html">Mi reserva</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Experiencia</a>
+                                <a class="nav-link mx-lg-2" aria-current="page" href="../../index.html">Experiencia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Destinos</a>
+                                <a class="nav-link mx-lg-2" aria-current="page" href="../../index.html">Destinos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Skyflyer</a>
+                                <a class="nav-link mx-lg-2" aria-current="page" href="../../index.html">Skyflyer</a>
                             </li>
                         </ul>
                     </div> 
@@ -50,6 +50,7 @@
 
     <!-- Esta es la parte principal del sitio -->
     <main>
+        <!-- En esta parte van los meses-->
         <div class="contenedorCarousel">
             <h4>Seleccioná la fecha de tu viaje</h4>
             <div class="carousel">
@@ -74,7 +75,16 @@
                 </div>
             </div>
         </div>
-        
+        <!--En esta parte partq va los horarios:-->
+        <div class="ContenedorHorario">
+           <h4>Seleccione el horario</h4>
+           
+            <div class="horario">
+                <label for="hora">Hora selecionada:</label>
+                <select id="hora" name="hora">
+                    <!-- Aquí se insertarán las horas dinámicamente -->
+                </select>
+        </div>
     </main>
     
     <!-- Este es el pie de pagina -->
