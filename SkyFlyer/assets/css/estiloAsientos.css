@@ -49,6 +49,7 @@
  .Titulo-Asientos{
     text-align: center;
     margin-top: 20px;
+    background-color: #cff7fa;
  }
  .Titulo-Asientos h2 h4{
     font-family:  "Nunito", sans-serif;
@@ -105,8 +106,14 @@
     text-align: center;
     font-size: 1.2em;
 }
- 
-
+ /*Boton confirmar estilo*/
+ button{
+    margin-left: 600px;
+ }
+  .btnConfirmar a{
+    text-align: center;
+    text-decoration: none;
+  }
 
 /*PIE DE PÁGINA*/
 footer{

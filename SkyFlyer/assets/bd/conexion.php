@@ -2,7 +2,7 @@
 $host = 'localhost';
 $usuario = 'root'; // El usuario por defecto en XAMPP
 $clave = ''; // La contraseña por defecto es vacía
-$baseDeDatos = ''; // Nombre de tu base de datos
+$baseDeDatos = 'skyfalyer'; // Nombre de tu base de datos
 
 // Crear conexión
 $conn = new mysqli($host, $usuario, $clave, $baseDeDatos);
