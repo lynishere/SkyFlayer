@@ -1,0 +1,741 @@
+/*--- FORMATO MOBILE ---*/
+
+/*CUERPO (BODY) de la pagina*/
+#cuerpo{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    padding-top: 18vw;
+}
+
+
+/*ENCABEZADO*/
+/* Encabezado (nav) */
+#navegador{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 18vw; /* Puedes ajustar el tamaño según la vista */
+    z-index: 1000; /* Asegúrate de que tenga un valor alto para que esté encima del contenido */
+    background-color: white; /* Asegúrate de que tenga un fondo visible */
+    box-shadow: 0 0 18px rgb(7, 235, 235); 
+    font-family: "Nunito", sans-serif;
+}
+
+#navNombre{
+    font-size: 4vw;
+    font-weight: bold;
+    color: black;
+}
+
+    
+#botonAbrirMenu{
+    border: none;
+    font-size: 1.25rem;
+}
+
+#botonAbrirMenu:focus, #botonCerrarMenu:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    position: relative;
+}
+
+
+
+/*MAIN*/
+/*Calendario*/
+.contenedorCarousel{
+    margin-bottom: 2vw;
+    margin: 2vw 5vw;
+}
+.contenedorCarousel h4{
+    font-size: 1.8vw;
+    padding: 2vw 2vw;
+    margin: 0;
+    font-weight: bold;
+}
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin: 1vw 0;
+}
+.carousel .row {
+    height: 30vw;
+}
+.carousel .row h3 {
+    font-weight: bold;
+    margin-bottom: 1VW;
+}
+
+
+.carousel {
+    height: auto;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Cada elemento ocupará el 100% del ancho del carrusel */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    display: none;
+}
+.carousel-item:first-child {
+    display: block;
+}
+table {
+    width: 90%; /* Ajusta el tamaño de la tabla dentro del contenedor */
+    max-width: 100%; /* Para que no exceda el tamaño del contenedor */
+    margin: auto; /* Centra la tabla */
+   /*table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}*/
+}
+
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.carousel-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    color: white;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 2vw;
+    border-radius: 100%;
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-nav button:first-of-type {
+    left: 10px; /* Ubicación a la izquierda */
+}
+
+.carousel-nav button:last-of-type {
+    right: 10px; /* Ubicación a la derecha */
+}
+
+
+th, td {
+
+    text-align: center;
+    padding: 5px;
+    position: relative;
+}
+td button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+table th, table td {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+button.boton-eliminar {
+    font-size: 0.7em;
+}
+.boton-eliminar{
+    position: absolute;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    background: rgb(36, 35, 35);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 0.7em;
+}
+.boton-eliminar:hover{
+    background-color: gray;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+button:hover {
+    color: white;
+    background-color: rgb(148, 224, 224);
+}
+.seleccionado {
+    background-color: rgb(7, 215, 215);
+    color: white;
+}
+.carousel-item h3{
+    text-align: center;
+    font-size: 20px;
+}
+main h4{
+    text-align: center;
+    font-size: 25px;
+}
+
+/*Horario-------------------------------------------------------------*/
+.ContenedorHorario{
+text-align: center;
+background-color: antiquewhite;
+height: 90px;
+width: 80%;
+padding:6px;
+}
+/*COntnedor boton continuar*/
+.container-Continuar{
+    background-color: rgba(146, 143, 143, 0.514);
+    padding: 20px;
+    margin-top: 5%;
+    text-align: right;
+    margin-bottom: 1px;
+}
+.container-Continuar p{
+    text-align: left;
+    font-size: 15px;
+    position: relative;
+}
+.Boton-Confirmar{
+
+font-size: 15px;
+color: black;
+border-style: hidden;
+border-color: rgb(40, 50, 51);
+background-color: aquamarine;
+margin-left: 30px;
+text-decoration: none;
+}
+
+/*PIE DE PÁGINA*/
+footer{
+    background-color: rgb(255, 255, 255);
+    border-top: solid black;
+}
+
+.contenedorInformacionRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: solid;
+    background-color: rgb(7, 235, 235);
+}
+
+.contenedorInformacionRedes .informacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11.5vw;
+    margin: 1vw 3vw;
+}
+
+.informacion .descripcion{
+    padding: 2vw 2vw;
+}
+
+.informacion .descripcion .vuelos-button {
+    border: 0.1vw black solid;
+    padding: 0.9vw 13.5vw;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 0.5s;
+}
+.informacion .descripcion .vuelos-button:hover {
+    background-color:rgba(168, 247, 247, 0.884);
+    transition: 0.3s;
+}
+
+.informacion .descripcion h1{
+    font-size: 1.6vw;
+    font-weight: bold;
+    padding-bottom: 1vw;
+}
+.informacion .descripcion h2{
+    font-size: 0.9vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.informacion .enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacion .enlaces section{
+    width: 14vw;
+    height: 15.3vw;
+    padding: 2vw 0;
+}
+
+.informacion .enlaces section h2{
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 0;
+}
+
+.informacion .enlaces section ul{
+    padding: 0;
+}
+
+.informacion .enlaces section ul li{
+    list-style-type: none;
+}
+.informacion .enlaces section ul li a{
+    text-decoration: none;
+    color: black;
+}
+.informacion .enlaces section ul li a:hover{
+    text-decoration: none;
+    color: rgba(39, 125, 125, 0.884);
+}
+
+
+.informacion .redes{
+    display: flex;
+    justify-content: right;
+    padding-right: 2vw;
+}
+
+.informacion .redes .iconos{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0.9vw;
+}
+
+.informacion .redes .iconos i{
+    font-size: 2vw;
+    color: black;
+}
+
+.informacion .redes .iconos a{
+    border-radius: 50%;
+    transition: transform 0.25s;
+}
+.informacion .redes .iconos a:hover{
+    transform: scale(1.2);
+}
+footer p{
+    background-color: rgb(89, 89, 89);
+    text-align: center;
+    color: white;
+    font-size: 0.8vw;
+    padding: 1.5vw;
+    margin: 0;
+}
+
+/*--- FORMATO TABLET ---*/
+@media screen and (min-width: 768px){
+    /*ENCABEZADO*/
+    #contenedorImagenLogo img{
+        height: 20vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+
+
+    /*MAIN*/
+    #presentacion{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30vw;
+        padding-bottom: 60vw;
+        height: 15vw;
+    }
+    
+
+    /*PIE DE PÁGINA*/
+    footer{
+        background-color: rgb(255, 255, 255);
+        border-top: solid black;
+    }
+    .contenedorDatosRedes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .datosYredes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20vw;
+        justify-items: center;
+        align-items: center;
+        width: 80vw;
+        padding: 4vw;
+        margin-top: 15vw;
+        margin-bottom: 15vw;
+    }
+    .datos h1{
+        font-weight: bold;
+        font-size: 3vw;
+        padding-bottom: 3vw;
+    }
+    .datos h2{
+        font-size: 2vw;
+        margin: 0;
+    }
+    .redes h1{
+        font-weight: bold;
+        font-size: 3vw;
+        padding-bottom: 3vw;
+    }
+    .redes .iconos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0.8vw;
+    }
+    .iconos i{
+        font-size: 4vw;
+        color: black;
+    }
+    .iconos a{
+        border-radius: 50%;
+        transition: transform 0.25s;
+    }
+    .iconos a:hover{
+        transform: scale(1.2);
+    }
+    footer p{
+        background-color: rgb(89, 89, 89);
+        text-align: center;
+        color: white;
+        font-size: 1.5vw;
+        padding: 3vw;
+        margin: 0;
+    }
+}
+
+/*--- FORMATO LAPTOP ---*/
+@media screen and (min-width: 1024PX){
+    /*ENCABEZADO*/
+    #contenedorImagenLogo img{
+        height: 10vw;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+
+    .offcanvas-body a{
+        padding: 0;
+        color: black;
+        font-size: large;
+    }
+
+    .nav-link::before{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1.8vw;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+        font-size: 2vw;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+
+
+    /*MAIN*/
+
+    /* CARRUSEL */
+    .carousel-inner{
+        height: 35vw;
+    }
+    .carousel-item{
+        height: 35vw;
+    }
+
+
+    /*PIE DE PÁGINA*/
+    footer{
+        background-color: rgb(255, 255, 255);
+        border-top: solid black;
+    }
+    .contenedorDatosRedes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 20vw;
+        border-top: solid;
+    }
+    .datosYredes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20vw;
+        justify-items: center;
+        align-items: center;
+        width: 80vw;
+        padding: 4vw;
+        margin-top: 15vw;
+        margin-bottom: 15vw;
+    }
+    .datos h1{
+        font-weight: bold;
+        font-size: 1.5vw;
+        padding-bottom: 3vw;
+    }
+    .datos h2{
+        font-size: 1vw;
+        margin: 0;
+    }
+    .redes h1{
+        font-weight: bold;
+        font-size: 1.5vw;
+        padding-bottom: 3vw;
+    }
+    .redes .iconos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0.9vw;
+    }
+    .iconos i{
+        font-size: 2vw;
+        color: black;
+    }
+    .iconos a{
+        border-radius: 50%;
+        transition: transform 0.25s;
+    }
+    .iconos a:hover{
+        transform: scale(1.2);
+    }
+    footer p{
+        background-color: rgb(89, 89, 89);
+        text-align: center;
+        color: white;
+        font-size: 0.8vw;
+        padding: 1.5vw;
+        margin: 0;
+    }
+}
+
+/*--- FORMATO LAPTOP L ---*/
+@media screen and (min-width: 1440PX){
+    /*CUERPO (BODY) de la pagina*/
+    #cuerpo{
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        font-family: "Nunito", sans-serif;
+        padding-top: 5vw;
+    }
+
+
+    /*ENCABEZADO*/
+    /* Encabezado (nav) */
+    #navegador{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 5vw; /* Puedes ajustar el tamaño según la vista */
+        z-index: 1000; /* Asegúrate de que tenga un valor alto para que esté encima del contenido */
+        background-color: white; /* Asegúrate de que tenga un fondo visible */
+        box-shadow: 0 0 18px rgb(7, 235, 235);   
+        transition: 0.5s;
+    }
+
+    #navNombre{
+        font-size: 2vw;
+        font-weight: bold;
+        margin-left: 1vw;
+        margin-right: 1.5vw;
+    }
+
+    #navegador:hover{
+        background-color: rgb(7, 235, 235);
+        transition: 0.5s;
+    }
+
+    .nav-link{
+        height: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15vw 0;
+        font-size: 2vw;
+        transition: 1s;
+    }
+
+    .nav-link:hover{
+        transition: 0.3s;
+        transform: scale(1.15);
+    }
+    
+    
+    
+
+
+
+
+
+    /*PIE DE PÁGINA*/
+    footer{
+        background-color: rgb(255, 255, 255);
+        border-top: solid black;
+    }
+    
+    .contenedorInformacionRedes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: solid;
+        background-color: rgb(7, 235, 235);
+    }
+
+    .contenedorInformacionRedes .informacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 11.5vw;
+        margin: 1vw 3vw;
+    }
+
+    .informacion .descripcion{
+        padding: 2vw 2vw;
+    }
+
+    .informacion .descripcion .vuelos-button {
+        border: 0.1vw black solid;
+        padding: 0.9vw 13.5vw;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .informacion .descripcion .vuelos-button:hover {
+        background-color:rgba(168, 247, 247, 0.884);
+        transition: 0.3s;
+    }
+    
+    .informacion .descripcion h1{
+        font-size: 1.6vw;
+        font-weight: bold;
+        padding-bottom: 1vw;
+    }
+    .informacion .descripcion h2{
+        font-size: 0.9vw;
+        font-weight: bold;
+        margin-bottom: 2vw;
+    }
+
+    .informacion .enlaces{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .informacion .enlaces section{
+        width: 14vw;
+        height: 15.3vw;
+        padding: 2vw 0;
+    }
+
+    .informacion .enlaces section h2{
+        font-size: 1vw;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .informacion .enlaces section ul{
+        padding: 0;
+    }
+
+    .informacion .enlaces section ul li{
+        list-style-type: none;
+    }
+    .informacion .enlaces section ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    .informacion .enlaces section ul li a:hover{
+        text-decoration: none;
+        color: rgba(39, 125, 125, 0.884);
+    }
+
+
+    .informacion .redes{
+        display: flex;
+        justify-content: right;
+        padding-right: 2vw;
+    }
+
+    .informacion .redes .iconos{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        gap: 0.9vw;
+    }
+
+    .informacion .redes .iconos i{
+        font-size: 2vw;
+        color: black;
+    }
+
+    .informacion .redes .iconos a{
+        border-radius: 50%;
+        transition: transform 0.25s;
+    }
+    .informacion .redes .iconos a:hover{
+        transform: scale(1.2);
+    }
+    footer p{
+        background-color: rgb(89, 89, 89);
+        text-align: center;
+        color: white;
+        font-size: 0.8vw;
+        padding: 1.5vw;
+        margin: 0;
+    }
+}

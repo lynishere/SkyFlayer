@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>SKYFLYER</title>
+    <link rel="shortcut icon" href="./assets/img/SKYFLYER.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/estiloIndex.css" type="text/css">
+</head>
+<body id="cuerpo">
+    <!-- Este es el encabezado del sitio -->
+    <header>
+        <!-- fixed-top -->
+        <nav id="navegador" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a id="navNombre" class="navbar-brand" href="/index.html">SKYFLYER</a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvas NavbarLabel">
+                    <div class="offcanvas-header">
+                        <h3>Menú</h3>
+                        <button id="botonCerrarMenu" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Mi reserva</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Experiencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Destinos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Skyflyer</a>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- Esta es la parte principal del sitio -->
+    <main>
+        <!-- CARRUSEL -->
+        <div class="carrusel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                
+                <input type="radio" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 20px; height: 20px;"></input >
+                <input  type="radio" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="width: 20px; height: 20px;">  </input >
+                <input  type="radio" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="width: 20px; height: 20px;color:black"></input >
+            </div>
+            <div class="carousel-inner">
+                <div id="cartel1" class="carousel-item active">
+                    <img  class="img-carrusel" src="assets/img/paisaje1.jpg" alt="bariloche" >
+                </div>
+                <div id="cartel2" class="carousel-item">
+                    <img src="assets/img/paisaje2.jpeg" alt="">
+                </div>
+                <div id="cartel3" class="carousel-item">
+                    <img src="assets/img/paisaje3.jpg" alt="paisaje1">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+        <!-- FINAL DEL CARRUSEL -->
+
+        <div class="main">
+            <div class="tabs">
+                <div class="active">Vuelos</div>
+            </div>
+            <div class="form">
+                <!--Droopdown origen-->
+                <div id="origen" class="input-group">
+                    <label for="origin">ORIGEN</label>
+                    <i class="fas fa-plane-departure icon"></i>
+                    <select class="opciones">
+                        <option>Buenos Aires (BUE)</option>
+                        <option>Bariloche (BRC)</option>
+                        <option>Comodoro Rivadavia (CRD)</option>
+                        <option>Córdoba (COR)</option>
+                        <option>Corrientes (CNQ)</option>
+                        <option>El Calafate (FTE)</option>
+                        <option>Florianópolis (FLN)</option>
+                        <option >Jujuy (JUJ)</option>
+                        <option >Mendoza (MDZ) </option>
+                        <option >Neuquen (NQN)</option>
+                        <option >Posadas (PSS)</option>
+                        <option >Puerto Iguazu (IGR)</option>
+                        <option >Puerto Madryn (PMY)</option>
+                        <option >Rio de Janerio (RIO)</option>
+                        <option >Salta(SLA)</option>
+                        <option >San Juan (UAQ)</option>
+                        <option >Santiago del Estero (SOE)</option>
+                        <option >Sao Paoblo (SAO)</option>
+                        <option >Tucumán (TUC)</option>
+                        <option >Ushuaia (USH)</option>
+                    </select>
+                </div>
+                <!-- dropdown destino-->
+                <div id="destino" class="input-group">
+                    <label for="destination">DESTINO</label>
+                    <i class="fas fa-plane-arrival icon"></i>
+                    <select class="opciones">
+                        <option>Ciudad o aeropuerto</option>
+                        <option>Buenos Aires (BUE)</option>
+                        <option>Bariloche (BRC)</option>
+                        <option>Comodoro Rivadavia (CRD)</option>
+                        <option>Córdoba (COR)</option>
+                        <option>Corrientes (CNQ)</option>
+                        <option>El Calafate (FTE)</option>
+                        <option>Florianópolis (FLN)</option>
+                        <option >Jujuy (JUJ)</option>
+                        <option >Mendoza ( MDZ) </option>
+                        <option >Neuquen (NQN)</option>
+                        <option >Posadas (PSS)</option>
+                        <option >Puerto Iguazu (IGR)</option>
+                        <option >Puerto Madryn (PMY)</option>
+                        <option >Rio de Janerio (RIO)</option>
+                        <option >Salta(SLA)</option>
+                        <option >San Juan (UAQ)</option>
+                        <option >Santiago del Estero (SOE)</option>
+                        <option >Sao Paoblo (SAO)</option>
+                        <option >Tucumán (TUC)</option>
+                        <option >Ushuaia (USH)</option>
+                    </select>
+                </div>
+                <!--Dropdown Pasajeros-->
+                <div class="input-group passenger-dropdown">
+                    <label for="passengers">CANTIDAD DE PASAJEROS</label>
+                    <i id="icono" class="fas fa-user icon"><p>1 Pasajero</p></i>
+                    
+                    <!--
+                    <select name="passenger" id="Pasajero">
+                        <option value="1"> 1 Pasajero</option>
+                    </select>
+                    -->
+                </div>
+                <a href="./assets/pages/EFecha.html" class="search-button">Buscar vuelos</a>
+                <!-- <button  id="Buscar" class="search-button">Buscar vuelos</button> -->
+                <!--
+                <br><br>
+                <div  id="switch-button" class="promo-code">
+                    <label >CÓDIGO PROMOCIONAL</label>
+                    <br>
+                    <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+                    <label for="switch-label" class="switch-button__label"></label>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+    
+    
+    <!-- Este es el pie de pagina -->
+    <footer>
+        <div class="contenedorInformacionRedes">
+                <div class="informacion">
+                    <div class="descripcion">
+                        <h1>Somos Skyflyer</h1>
+                        <h2>Somos más que una aerolínea; somos quienes unimos a todos. Hacemos que cada vuelo sea inolvidable y te brindamos la mejor posibilidad de estar allí en un milésima de segundo. Somos una familia que hace que tu vuelo sea una experiencia memorable.</h2>
+                        <a href="./assets/pages/EFecha.html" class="vuelos-button">Buscar vuelos</a>
+                    </div>
+                    <div class="enlaces">
+                        <section>
+                            <h2>NOSOTROS</h2>
+                            <ul>
+                                <li>
+                                    <a href="">SobreSkyFlyer</a>
+                                </li>
+                                <li>
+                                    <a href="">¿Preguntas?</a>
+                                </li>
+                            </ul>
+                        </section>
+    
+                        <section>
+                            <h2>ARMÁ TU VIAJE</h2>
+                            <ul>
+                                <li>
+                                    <a href="">Buscar vuelos</a>
+                                </li>
+                                <li>
+                                    <a href="">Destinos</a>
+                                </li>
+                                <li>
+                                    <a href="">Menú a bordo</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="redes">
+                        <div class="iconos">
+                            <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                            <a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a>
+                            <a href="https://ar.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <p>&copy 2024  SKYFLYER Argentina</p>        
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Conecion con supabase-->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
